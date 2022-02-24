@@ -1,16 +1,23 @@
-# This is a sample Python script.
+import telebot  # pyTelegramBotAPI	4.3.1
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+bot = telebot.TeleBot('5187062324:AAHbopf8CawQfNbKYh9DT0SYW-befNjMSNk')  # Создаем экземпляр бота @Ivanov_Ivan_1MD19_bot
+# -----------------------------------------------------------------------
+# Функция, обрабатывающая команду /start
+@bot.message_handler(commands=["start"])
+def start(message, res=False):
+    chat_id = message.chat.id
 
+    bot.send_message(chat_id,
+                     text="Привет, {0.first_name}! Я тестовый бот для курса программирования на языке ПаЙтон".format(
+                         message.from_user))
+# -----------------------------------------------------------------------
+# Получение сообщений от юзера
+@bot.message_handler(content_types=['text'])
+def get_text_messages(message):
+    chat_id = message.chat.id
+    ms_text = message.text
+    bot.send_message(chat_id, text="Я тебя слышу!!! Ваше сообщение: " + ms_text)
+# -----------------------------------------------------------------------
+bot.polling(none_stop=True, interval=0) # Запускаем бота
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print()
