@@ -1,6 +1,6 @@
 import telebot  # pyTelegramBotAPI	4.3.1
 
-bot = telebot.TeleBot('5187062324:AAHbopf8CawQfNbKYh9DT0SYW-befNjMSNk')  # Создаем экземпляр бота @Ivanov_Ivan_1MD19_bot
+bot = telebot.TeleBot('5278792568:AAFt3lJxrghz3F7WiMCKXxsQsfOQ3FC0Lqo')  # Создаем экземпляр бота
 # -----------------------------------------------------------------------
 # Функция, обрабатывающая команду /start
 @bot.message_handler(commands=["start"])
