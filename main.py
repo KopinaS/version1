@@ -1,9 +1,9 @@
 import telebot  # pyTelegramBotAPI	4.3.1
 
-bot = telebot.TeleBot('5278792568:AAFt3lJxrghz3F7WiMCKXxsQsfOQ3FC0Lqo)  # Создаем экземпляр бота
+bot = telebot.TeleBot("5278792568:AAFt3lJxrghz3F7WiMCKXxsQsfOQ3FC0Lqo")  # Создаем экземпляр бота
 # -----------------------------------------------------------------------
 # Функция, обрабатывающая команду /start
-@bot.message_handler(commands=["start"])
+@bot.message_handler(commands = ["start"])
 def start(message, res=False):
     chat_id = message.chat.id
 
@@ -47,7 +47,7 @@ def get_text_messages(message):
     elif ms_text == "Помощь" or ms_text == "/help":
         bot.send_message(chat_id, "Автор: Копина Саша")
         key1 = types.InlineKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton(text = "Напишите автору", url = htts://t.me/kopinaS)
+        btn1 = types.InlineKeyboardButton(text = "Напишите автору", url = "htts://t.me/kopinaS")
         key1.add(btn1)
     else:
         bot.send_message(chat_id, text = "Я тебя слышу! Ваше сообщение: " + ms_text)
