@@ -38,8 +38,8 @@ def get_text_messages(message):
         markup.add(btn1, btn2, back)
         bot.send_message(chat_id, text="Развлечения и прогулки", reply_markup=markup)
 
-    elif ms_text == "/opossum" or ms_text == "Показать опоссума":
-        bot.send_message(chat_id, text="ещё не готово..")
+    elif ms_text == "Показать опоссума":
+        contents = requests.get('')
 
     elif ms_text == "Сериалы":
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -49,12 +49,12 @@ def get_text_messages(message):
         markup.add(btn1, btn2, back)
         bot.send_message(chat_id, text="Сериалы", reply_markup=markup)
 
-
     elif ms_text == "Помощь" or ms_text == "/help":
         bot.send_message(chat_id, "Автор: Саша Копина")
-        key1 = types.InlineKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton(text="Напишите автору", url="https://t.me/kopinaS")
-        key1.add(btn1)
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        #btn1 = types.KeyboardButton("Напишите автору")
+        #markup.add(btn1)
+        bot.send_message(chat_id, text="Напишите автору: https://t.me/kopinaS", reply_markup=markup)
 
     else:
         bot.send_message(chat_id, text="Я тебя слышу!!! Ваше сообщение: " + ms_text)
@@ -63,3 +63,4 @@ def get_text_messages(message):
 bot.polling(none_stop=True, interval=0)
 
 print()
+
