@@ -38,9 +38,6 @@ def get_text_messages(message):
         markup.add(btn1, btn2, back)
         bot.send_message(chat_id, text="Развлечения и прогулки", reply_markup=markup)
 
-    elif ms_text == "Показать опоссума":
-        contents = requests.get('')
-
     elif ms_text == "Сериалы":
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("Жанры")
@@ -63,4 +60,3 @@ def get_text_messages(message):
 bot.polling(none_stop=True, interval=0)
 
 print()
-
