@@ -1,4 +1,5 @@
 import telebot
+import types
 from telebot import types
 import random
 
@@ -26,26 +27,30 @@ def get_text_messages(message):
     if ms_text == "Главное меню" or ms_text == "👋🏻 Главное меню" or ms_text == "Вернуться на главное меню":
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("Прогулки")
-        btn2 = types.KeyboardButton("Сериалы")
+        btn2 = types.KeyboardButton("Кафе/рестораны")
         back = types.KeyboardButton("Помощь")
         markup.add(btn1, btn2, back)
         bot.send_message(chat_id, text="Вы в главном меню", reply_markup=markup)
 
     elif ms_text == "Прогулки":
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton("Показать место")
+        btn1 = types.KeyboardButton("Выбрать район")
         back = types.KeyboardButton("Помощь")
         markup.add(btn1, back)
         bot.send_message(chat_id, text="Прогулки", reply_markup=markup)
 
-    elif ms_text == "Показать место":
-        bot.send_message(chat_id, text="/vasileostrovsky - Василеостровский район")
-        bot.send_message(chat_id, text = "/admiralty - Адмиралтейский район")
-        bot.send_message(chat_id, text="/moscow - Московский район")
-        bot.send_message(chat_id, text="/nevsky - Невский район")
-        bot.send_message(chat_id, text="/petrogradsky - Петроградский район")
+    elif ms_text == "Выбрать район":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("Василеостровский район")
+        btn2 = types.KeyboardButton("Адмиралтейский район")
+        btn3 = types.KeyboardButton("Московский район")
+        btn4 = types.KeyboardButton("Невский район")
+        btn5 = types.KeyboardButton("Петроградский район")
+        back = types.KeyboardButton("Помощь")
+        markup.add(btn1, btn2, btn3, btn4, btn5, back)
+        bot.send_message(chat_id, text="Выбрать район", reply_markup=markup)
 
-    elif ms_text == "/vasileostrovsky":
+    elif ms_text == "Василеостровский район":
         vplace1 = "Дворик Академии художеств"
         vplace2 = "Египетские сфинксы на берегу Невы"
         vplace3 = "Особняк Брусницыных"
@@ -58,6 +63,60 @@ def get_text_messages(message):
         vplace10 = "Севкабель Порт"
         vplace = random.choice([vplace1, vplace2, vplace3, vplace4, vplace5, vplace6, vplace7, vplace8, vplace9, vplace10])
         bot.send_message(chat_id, text="Можно посетить " + vplace)
+
+    elif ms_text == "Адмиралтейский район":
+        aplace1 = "Государственный Эрмитаж"
+        aplace2 = "Исаакиевский собор"
+        aplace3 = "Дворцовая площадь"
+        aplace4 = "Зимний дворец Петра I"
+        aplace5 = "Остров Новая Голландия"
+        aplace6 = "Летний сад"
+        aplace7 = "Мраморный дворец (филиал Русского музея)"
+        aplace8 = "Владимирский дворец"
+        aplace9 = "Особняк Румянцева"
+        aplace10 = "Сенатская площадь"
+        aplace = random.choice([aplace1, aplace2, aplace3, aplace4, aplace5, aplace6, aplace7, aplace8, aplace9, aplace10])
+        bot.send_message(chat_id, text="Можно посетить " + aplace)
+
+    elif ms_text == "Невский район":
+        nplace1 = "Музей Фаберже"
+        nplace2 = "Государственный Русский музей"
+        nplace3 = "Казанский кафедральный собор"
+        nplace4 = "Российский этнографический музей"
+        nplace5 = "Михайловский Замок"
+        nplace6 = "ТИТИКАКА"
+        nplace7 = "Строгановский дворец"
+        nplace8 = "Арт-Центр в Перинных Рядах"
+        nplace9 = "Граффити Виктор Цой"
+        nplace10 = "Набережная канала Грибоедова"
+        nplace = random.choice([nplace1, nplace2, nplace3, nplace4, nplace5, nplace6, nplace7, nplace8, nplace9, nplace10])
+        bot.send_message(chat_id, text="Можно посетить " + nplace)
+
+    elif ms_text == "Московский район":
+        mplace1 = "Московские Триумфальные ворота"
+        mplace2 = "Пулковская обсерватория"
+        mplace3 = "Музей «Гранд Макет Россия»"
+        mplace4 = "Площадь Победы"
+        mplace5 = "Московской парк Победы"
+        mplace6 = "Монумент “Героическим защитникам Ленинграда”"
+        mplace7 = "Пулковский парк"
+        mplace8 = "Воскресенский Новодевичий Монастырь"
+        mplace = random.choice([mplace1, mplace2, mplace3, mplace4, mplace5, mplace6, mplace7, mplace8])
+        bot.send_message(chat_id, text="Можно посетить " + mplace)
+
+    elif ms_text == "Петроградский район":
+        pplace1 = "Петропавловская крепость"
+        pplace2 = "Елагин остров"
+        pplace3 = "Парк аттракционов Диво Остров"
+        pplace4 = "Ботанический сад Петра Великого"
+        pplace5 = "Домик Петра I"
+        pplace6 = "Александровский Парк"
+        pplace7 = "Приморский парк Победы"
+        pplace8 = "Петровская набережная"
+        pplace9 = "Лопухинский сад"
+        pplace10 = "Каменностровский проспект"
+        pplace = random.choice([pplace1, pplace2, pplace3, pplace4, pplace5, pplace6, pplace7, pplace8, pplace9, pplace10])
+        bot.send_message(chat_id, text="Можно посетить " + pplace)
 
     #elif ms_text == "/vasileostrovsky":
         #key1 = types.InlineKeyboardMarkup()
@@ -94,19 +153,23 @@ def get_text_messages(message):
     # img = open('petrogradsky.jpg', 'rb')
     # bot.send_photo(chat_id, img)
 
-    elif ms_text == "Сериалы":
+    elif ms_text == "Кафе/рестораны":
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton("Жанры")
-        btn2 = types.KeyboardButton("Подборки")
+        btn1 = types.KeyboardButton("Василеостровский р-н")
+        btn2 = types.KeyboardButton("Адмиралтейский р-н")
+        btn3 = types.KeyboardButton("Московский р-н")
+        btn4 = types.KeyboardButton("Невский р-н")
+        btn5 = types.KeyboardButton("Петроградский р-н")
         back = types.KeyboardButton("Помощь")
-        markup.add(btn1, btn2, back)
-        bot.send_message(chat_id, text="Сериалы", reply_markup=markup)
+        markup.add(btn1, btn2, btn3, btn4, btn5, back)
+        bot.send_message(chat_id, text="Кафе/рестораны", reply_markup=markup)
+
+    elif ms_text == "Василеостровский р-н":
+        bot.send_message(chat_id, text="Брюгге - Набережная Макарова, 22 /n ")
 
     elif ms_text == "Помощь" or ms_text == "/help":
         bot.send_message(chat_id, "Автор: Саша Копина")
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        #btn1 = types.KeyboardButton("Напишите автору")
-        #markup.add(btn1)
         bot.send_message(chat_id, text="Напишите автору: https://t.me/kopinaS", reply_markup=markup)
 
     else:
