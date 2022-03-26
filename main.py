@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 import random
 
-bot = telebot.TeleBot('5278792568:AAFt3lJxrghz3F7WiMCKXxsQsfOQ3FC0Lqo')  # Создаем экземпляр бота
+bot = telebot.TeleBot('5278792568:AAFt3lJxrghz3F7WiMCKXxsQsfOQ3FC0Lqo') 
 
 @bot.message_handler(commands=["start"])
 def start(message, res=False):
@@ -150,7 +150,6 @@ def get_text_messages(message):
         nplace10 = "Набережная канала Грибоедова"
         nplace = random.choice([nplace1, nplace2, nplace3, nplace4, nplace5, nplace6, nplace7, nplace8, nplace9, nplace10])
         bot.send_message(chat_id, text="Можно посетить " + nplace)
-
         if nplace == "Музей Фаберже":
             bot.send_photo(chat_id, open('E:\pythonProject\img\musfab.jpg', 'rb'))
             bot.send_message(chat_id, text="Сайт: https://fabergemuseum.ru/ \n"
@@ -198,7 +197,6 @@ def get_text_messages(message):
         mplace7 = "Пулковский парк"
         mplace = random.choice([mplace1, mplace2, mplace3, mplace4, mplace5, mplace6, mplace7])
         bot.send_message(chat_id, text="Можно посетить " + mplace)
-
         if mplace == "Московские Триумфальные ворота":
             bot.send_photo(chat_id, open('E:\pythonProject\img\mta.jpg', 'rb'))
             bot.send_message(chat_id, text="Площадь Московские Ворота")
@@ -236,7 +234,6 @@ def get_text_messages(message):
         pplace10 = "Каменностровский проспект"
         pplace = random.choice([pplace1, pplace2, pplace3, pplace4, pplace5, pplace6, pplace7, pplace8, pplace9, pplace10])
         bot.send_message(chat_id, text="Можно посетить " + pplace)
-
         if pplace == "Петропавловская крепость":
             bot.send_photo(chat_id, open('E:\pythonProject\img\petropavlovskaya-krepost.jpg', 'rb'))
             bot.send_message(chat_id, text="Сайт: https://petropavlovskaya.org/")
