@@ -14,7 +14,7 @@ def start(message, res=False):
     markup.add(btn1, btn2)
 
     bot.send_message(chat_id,
-                     text="Привет, {0.first_name}! Я тестовый бот для курса программирования на языке Пайтон".format(
+                     text="Привет, {0.first_name}! Я тестовый бот для курса программирования на языке Python".format(
                          message.from_user))
 # -----------------------------------------------------------------------
 # Получение сообщений от юзера
