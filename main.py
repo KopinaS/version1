@@ -67,8 +67,8 @@ def get_text_messages(message):
             bot.send_message(chat_id, text="Кожевенная линия, 27")
         elif vplace == "Музей современного искусства Эрарта":
             bot.send_photo(chat_id, open('G:\pythonProject\img\erarta.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://www.erarta.com/ \n"
-                                           "29-я линия В.О., 2")
+            bot.send_message(chat_id, text="29-я линия В.О., 2 \n"
+                                           "Сайт: https://www.erarta.com/")
         elif vplace == "Памятник бомбардиру Василию":
             bot.send_photo(chat_id, open('G:\pythonProject\img\pamyatnik.jpg', 'rb'))
             bot.send_message(chat_id, text="7-я линия Васильевского острова, 6")
@@ -85,8 +85,8 @@ def get_text_messages(message):
             bot.send_message(chat_id, text="Большой просп. Васильевского острова, 15")
         elif vplace == "Севкабель Порт":
             bot.send_photo(chat_id, open('G:\pythonProject\img\port.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://sevcableport.ru/ru \n"
-                                           "Кожевенная линия, 40")
+            bot.send_message(chat_id, text="Кожевенная линия, 40 \n"
+                                           "Сайт: https://sevcableport.ru/ru")
 
     elif ms_text == "Адмиралтейский район":
         aplace1 = "Государственный Эрмитаж"
@@ -102,26 +102,26 @@ def get_text_messages(message):
         bot.send_message(chat_id, text="Можно посетить " + aplace)
         if aplace == "Государственный Эрмитаж":
             bot.send_photo(chat_id, open('G:\pythonProject\img\ermitag.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: http://collections.hermitage.ru/ \n"
-                                           "Дворцовая набережная, 34")
+            bot.send_message(chat_id, text="Дворцовая набережная, 34 \n"
+                                           "Сайт: http://collections.hermitage.ru/")
         elif aplace == "Исаакиевский собор":
             bot.send_photo(chat_id, open('G:\pythonProject\img\isaak.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://cathedral.ru/ru \n"
-                                           "Исаакиевская площадь, 4")
+            bot.send_message(chat_id, text="Исаакиевская площадь, 4 \n"
+                                           "Сайт: https://cathedral.ru/ru")
         elif aplace == "Дворцовая площадь":
             bot.send_photo(chat_id, open('G:\pythonProject\img\dvordsovaya.jpg', 'rb'))
         elif aplace == "Остров Новая Голландия":
             bot.send_photo(chat_id, open('G:\pythonProject\img\gnovaya.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://www.newhollandsp.ru/ \n"
-                                           "наб. Адмиралтейского канала, 2")
+            bot.send_message(chat_id, text="наб. Адмиралтейского канала, 2 \n"
+                                           "Сайт: https://www.newhollandsp.ru/")
         elif aplace == "Мраморный дворец (филиал Русского музея)":
             bot.send_photo(chat_id, open('G:\pythonProject\img\mramor.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://rusmuseum.ru/marble-palace/ \n"
-                                           "Миллионная ул., 5А")
+            bot.send_message(chat_id, text="Миллионная ул., 5А \n"
+                                           "Сайт: https://rusmuseum.ru/marble-palace/")
         elif aplace == "Владимирский дворец":
             bot.send_photo(chat_id, open('G:\pythonProject\img\du.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://дом-ученых.рф/ \n"
-                                           "Дворцовая наб., 26")
+            bot.send_message(chat_id, text="Дворцовая наб., 26 \n"
+                                           "Сайт: https://дом-ученых.рф/")
         elif aplace == "Особняк Румянцева":
             bot.send_photo(chat_id, open('G:\pythonProject\img\Румянцева.jpg', 'rb'))
             bot.send_message(chat_id, text="Английская набережная, 44")
@@ -146,32 +146,32 @@ def get_text_messages(message):
         bot.send_message(chat_id, text="Можно посетить " + nplace)
         if nplace == "Музей Фаберже":
             bot.send_photo(chat_id, open('G:\pythonProject\img\musfab.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://fabergemuseum.ru/ \n"
-                                           "наб. реки Фонтанки, 21")
+            bot.send_message(chat_id, text="наб. реки Фонтанки, 21 \n"
+                                           "Сайт: https://fabergemuseum.ru/")
         elif nplace == "Государственный Русский музей - Михайловский дворец":
             bot.send_photo(chat_id, open('G:\pythonProject\img\grm.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://rusmuseum.ru/mikhailovsky-palace/ \n"
-                                           "Инженерная ул., 2-4А")
+            bot.send_message(chat_id, text="Инженерная ул., 2-4А \n"
+                                           "Сайт: https://rusmuseum.ru/mikhailovsky-palace/")
         elif nplace == "Казанский кафедральный собор":
             bot.send_photo(chat_id, open('G:\pythonProject\img\kks.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: http://kazansky-spb.ru/ \n"
-                                           "Казанская площадь, 2")
+            bot.send_message(chat_id, text="Казанская площадь, 2 \n"
+                                           "Сайт: http://kazansky-spb.ru/")
         elif nplace == "Российский этнографический музей":
             bot.send_photo(chat_id, open('G:\pythonProject\img\etnogr.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://ethnomuseum.ru/ \n"
-                                           "ул. Инженерная, д.4/1")
+            bot.send_message(chat_id, text="ул. Инженерная, д.4/1 \n"
+                                           "Сайт: https://ethnomuseum.ru/")
         elif nplace == "Михайловский Замок":
             bot.send_photo(chat_id, open('G:\pythonProject\img\michail.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://rusmuseum.ru/mikhailovsky-castle/ \n"
-                                           "Садовая ул., 2")
+            bot.send_message(chat_id, text="Садовая ул., 2 \n"
+                                           "Сайт: https://rusmuseum.ru/mikhailovsky-castle/")
         elif nplace == "Летний сад":
             bot.send_photo(chat_id, open('G:\pythonProject\img\letniy.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://rusmuseum.ru/summer-garden/history/ \n"
-                                           "набережная Кутузова, 2")
+            bot.send_message(chat_id, text="набережная Кутузова, 2 \n"
+                                           "Сайт: https://rusmuseum.ru/summer-garden/history/")
         elif nplace == "Строгановский дворец":
             bot.send_photo(chat_id, open('G:\pythonProject\img\stroganovsky.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://rusmuseum.ru/stroganov-palace/ \n"
-                                           "Невский просп., 17")
+            bot.send_message(chat_id, text="Невский просп., 17 \n"
+                                           "Сайт: https://rusmuseum.ru/stroganov-palace/")
         elif nplace == "Арт-Центр в Перинных Рядах":
             bot.send_photo(chat_id, open('G:\pythonProject\img\centr.jpg', 'rb'))
             bot.send_message(chat_id, text="Думская ул., 4")
@@ -196,12 +196,12 @@ def get_text_messages(message):
             bot.send_message(chat_id, text="Площадь Московские Ворота")
         elif mplace == "Пулковская обсерватория":
             bot.send_photo(chat_id, open('G:\pythonProject\img\pulkovskaya.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: http://www.gaoran.ru/ \n"
-                                           "Пулковское ш., 65")
+            bot.send_message(chat_id, text="Пулковское ш., 65 \n"
+                                           "Сайт: http://www.gaoran.ru/")
         elif mplace == "Музей «Гранд Макет Россия»":
             bot.send_photo(chat_id, open('G:\pythonProject\img\grandmaket.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://grandmaket.ru/ \n"
-                                           "Цветочная улица, 16Л")
+            bot.send_message(chat_id, text="Цветочная улица, 16Л \n"
+                                           "Сайт: https://grandmaket.ru/")
         elif mplace == "Московский парк Победы":
             bot.send_photo(chat_id, open('G:\pythonProject\img\parkpobedi.jpg', 'rb'))
             bot.send_message(chat_id, text="Кузнецовская улица, 25")
@@ -210,8 +210,8 @@ def get_text_messages(message):
             bot.send_message(chat_id, text="Московское ш.")
         elif mplace == "Воскресенский Новодевичий Монастырь":
             bot.send_photo(chat_id, open('G:\pythonProject\img\mon.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://вноводевичий.рф/ \n"
-                                           "Московский просп., 100")
+            bot.send_message(chat_id, text="Московский просп., 100 \n"
+                                           "Сайт: https://вноводевичий.рф/")
         elif mplace == "Площадь Победы":
             bot.send_photo(chat_id, open('G:\pythonProject\img\ploschadpobedy.jpg', 'rb'))
 
@@ -239,19 +239,19 @@ def get_text_messages(message):
             bot.send_message(chat_id, text="Сайт: https://www.divo-ostrov.ru/")
         elif pplace == "Ботанический сад Петра Великого":
             bot.send_photo(chat_id, open('G:\pythonProject\img\sadbot.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://botsad-spb.com/ \n"
-                                           "ул. Профессора Попова, 2П")
+            bot.send_message(chat_id, text="ул. Профессора Попова, 2П \n"
+                                           "Сайт: https://botsad-spb.com/")
         elif pplace == "Домик Петра I":
             bot.send_photo(chat_id, open('G:\pythonProject\img\domik.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: https://rusmuseum.ru/cabin-of-peter-1/ \n"
-                                           "Петровская наб., 6")
+            bot.send_message(chat_id, text="Петровская наб., 6 \n"
+                                           "Сайт: https://rusmuseum.ru/cabin-of-peter-1/")
         elif pplace == "Александровский Парк":
             bot.send_photo(chat_id, open('G:\pythonProject\img\parkalex.jpg', 'rb'))
             bot.send_message(chat_id, text="Кронверкский проспект")
         elif pplace == "Приморский парк Победы":
             bot.send_photo(chat_id, open('G:\pythonProject\img\primpark.jpg', 'rb'))
-            bot.send_message(chat_id, text="Сайт: http://pppark.ru/ \n"
-                                           "Крестовский просп., 23")
+            bot.send_message(chat_id, text="Крестовский просп., 23 \n"
+                                           "Сайт: http://pppark.ru/")
         elif pplace == "Петровская набережная":
             bot.send_photo(chat_id, open('G:\pythonProject\img\petrnab.jpg', 'rb'))
         elif pplace == "Лопухинский сад":
