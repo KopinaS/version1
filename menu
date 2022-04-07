@@ -1,0 +1,45 @@
+from telebot import types
+
+
+# -----------------------------------------------------------------------
+class Menu:
+    hash = {}  # тут будем накапливать все созданные экземпляры класса
+    cur_menu = None  # тут будет находиться текущий экземпляр класса текущее меню
+    extendedParameters = {}
+
+    def __init__(self, name, buttons=None, parent=None, action=None):
+        self.parent = parent
+        self.name = name
+        self.buttons = buttons
+        self.action = action
+
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=5)
+        markup.add(*buttons)
+        self.markup = markup
+
+        self.__class__.hash[name] = self  # в классе содержится словарь, со всеми экземплярами класса, обновим его
+
+    @classmethod
+    def getExtPar(cls, id):
+        return cls.extendedParameters.pop(id, None)
+
+    @classmethod
+    def setExtPar(cls, parameter):
+        import uuid
+        id = uuid.uuid4().hex
+        cls.extendedParameters[id] = parameter
+        return id
+
+    @classmethod
+    def getMenu(cls, name):
+        menu = cls.hash.get(name)
+        if menu != None:
+            cls.cur_menu = menu
+        return menu
+
+
+m_main = Menu("Главное меню", buttons=["Развлечения", "Игры", "Помощь"])
+
+m_games = Menu("Игры", buttons=["Города", "Выход"], parent=m_main)
+m_game_cities = Menu("Города", buttons=["Город", "Выход"], parent=m_games, action="game_cities")
+m_fun = Menu("Развлечения", buttons=["Прогулки", "Кафе/рестораны", "Выход"], parent=m_main)
