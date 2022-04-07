@@ -1,6 +1,9 @@
 import telebot
 from telebot import types
 import random
+import BotGames
+from menuBot import Menu
+
 
 bot = telebot.TeleBot('5278792568:AAFt3lJxrghz3F7WiMCKXxsQsfOQ3FC0Lqo')
 
@@ -57,34 +60,34 @@ def get_text_messages(message):
         vplace = random.choice([vplace1, vplace2, vplace3, vplace4, vplace5, vplace6, vplace7, vplace8, vplace9, vplace10])
         bot.send_message(chat_id, text="Можно посетить " + vplace)
         if vplace == "Сад Академии художеств":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\SAH.jpg', 'rb'))
+            bot.send_photo(chat_id, 'https://avatars.mds.yandex.net/get-altay/2006773/2a0000016dc8b80b8f2435e6f4aadb04e798/XXL')
             bot.send_message(chat_id, text="Университетская наб., 17, находится между 3 и 4 линиями ВО")
         elif vplace == "Египетские сфинксы на берегу Невы":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\sfinks.jpg', 'rb'))
+            bot.send_photo(chat_id, 'https://pp.vk.me/c627417/v627417863/2d6c6/1JUJnG0knaA.jpg')
             bot.send_message(chat_id, text="Университетская набережная, 17")
         elif vplace == "Особняк Брусницыных":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\osobnyak-brusnitsynykh.jpg', 'rb'))
+            bot.send_photo(chat_id, 'http://sun9-21.userapi.com/impf/NvmvYzObrNy_qhd7cPiyUhHvP_IAPQYl39m4Ig/o6NnXP6Qumw.jpg?size=604x396&quality=96&sign=d1ac3e60d59c5a15db2b2c205d18acaa&type=album')
             bot.send_message(chat_id, text="Кожевенная линия, 27")
         elif vplace == "Музей современного искусства Эрарта":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\erarta.jpg', 'rb'))
+            bot.send_photo(chat_id, 'https://fortuna-travel.ru/images/erarta-600-1.jpg')
             bot.send_message(chat_id, text="29-я линия В.О., 2 \n"
                                            "Сайт: https://www.erarta.com/")
         elif vplace == "Памятник бомбардиру Василию":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\pamyatnik.jpg', 'rb'))
+            bot.send_photo(chat_id, 'https://petersmonuments.ru/upload/iblock/e6b/e6bd118ce3fa0159d56722c25548fb97.jpg')
             bot.send_message(chat_id, text="7-я линия Васильевского острова, 6")
         elif vplace == "Стрелка Васильевского острова":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\strelka.jpg', 'rb'))
+            bot.send_photo(chat_id, 'https://images.spasibovsem.ru/catalog/original/strelka-vasilevskogo-ostrova-sankt-peterburg-rossiya-otzyvy-1578937511.jpg')
             bot.send_message(chat_id, text="Биржевая площадь")
         elif vplace == "Дворец Меншикова":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\menshikov.jpg', 'rb'))
+            bot.send_photo(chat_id, 'https://www.spbmuzei.ru/wp-content/uploads/2019/12/menshik2-1140x588.jpg')
             bot.send_message(chat_id, text="Университетская наб., 15")
         elif vplace == "Улица Репина":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\pepina.jpg', 'rb'))
+            bot.send_photo(chat_id, 'https://kayakspb.ru/wp-content/uploads/2016/11/repina_1.jpg')
         elif vplace == "Двор духов":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\dvorduxov.jpg', 'rb'))
+            bot.send_photo(chat_id, 'https://petersburg24.ru/files/attachment_images/973_image.jpg?1531052667')
             bot.send_message(chat_id, text="Большой просп. Васильевского острова, 15")
         elif vplace == "Севкабель Порт":
-            bot.send_photo(chat_id, open('G:\pythonProject\img\port.jpg', 'rb'))
+            bot.send_photo(chat_id, 'https://avatars.mds.yandex.net/get-altay/1545421/2a0000016eeeabe47a56138eeca259321201/XXL')
             bot.send_message(chat_id, text="Кожевенная линия, 40 \n"
                                            "Сайт: https://sevcableport.ru/ru")
 
