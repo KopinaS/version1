@@ -1,42 +1,43 @@
+import telebot
+from menu import Menu
 from telebot import types
 
+bot = telebot.TeleBot('5278792568:AAFt3lJxrghz3F7WiMCKXxsQsfOQ3FC0Lqo')
 
-# -----------------------------------------------------------------------
-class Menu:
-    hash = {}  # тут будем накапливать все созданные экземпляры класса
-    cur_menu = None  # тут будет находиться текущий экземпляр класса текущее меню
-    extendedParameters = {}
+@bot.message_handler(commands="start")
+def command(message,res=False):
+    txt_message = f"Привет, {message.from_user.first_name}! Я тестовый бот для курса программирования на языке Python"
+    bot.send_message(message.chat.id, text=txt_message, reply_markup=Menu.getMenu("Главное меню").)
 
-    def __init__(self, name, buttons=None, parent=None, action=None):
-        self.parent = parent
-        self.name = name
-        self.buttons = buttons
-        self.action = action
+def send_help(chat_id):
+    global bot
+    bot.send_message(chat_id, "Автор: Копина Саша")
+    markup = types.InlineKeyboardMarkup()
+    btn1 = types.InlineKeyboardMarkButton(text="Напишите автору", url="https://t.me/kopinaS")
+    markup.add(btn1)
+    
+@bot.message_handler(fune=lambda message: True)
+def get_text_message(message):
+    chat_id = message.chat.id
+    ms_text = message.text
+    
+    if Men.cur_menu != None and ms_text in Menu.cur_menu.buttons:
+        if ms_text == "Помощь":
+            send_help(chat_id)
+            
+def goto_menu(chat_id, name_menu):
+    if name_menu == "Выход" and Menu.cur_menu != None and Menu.cur_menu.parent != None:
+        target_menu = Menu.getMenu(Menu.cur_menu.parent.name)
+    else:
+        target_menu = Menu.getMenu(name_menu)
+        
+    if target_menu != None:
+        bot.send_message(chat_id, text=target_menu.name, reply_markup=target_menu.markup)
+        
+bot.infinity_polling()
 
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=5)
-        markup.add(*buttons)
-        self.markup = markup
 
-        self.__class__.hash[name] = self  # в классе содержится словарь, со всеми экземплярами класса, обновим его
-
-    @classmethod
-    def getExtPar(cls, id):
-        return cls.extendedParameters.pop(id, None)
-
-    @classmethod
-    def setExtPar(cls, parameter):
-        import uuid
-        id = uuid.uuid4().hex
-        cls.extendedParameters[id] = parameter
-        return id
-
-    @classmethod
-    def getMenu(cls, name):
-        menu = cls.hash.get(name)
-        if menu != None:
-            cls.cur_menu = menu
-        return menu
-
+#------------------
 
 m_main = Menu("Главное меню", buttons=["Развлечения", "Игры", "Помощь"])
 
