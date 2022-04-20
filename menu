@@ -1,11 +1,12 @@
 from telebot import types
 
+
 # -----------------------------------------------------------------------
 class Menu:
-    hash = {} 
-    cur_menu = None
-    extendedParameters = {}
-    nameExtFile = "main.py"
+    hash = {}  # тут будем накапливать все созданные экземпляры класса
+    cur_menu = None  # тут будет находиться текущий экземпляр класса текущее меню
+    extendedParameters = {}  # это место хранения дополнительных параметров для передачи в inline кнопки
+    # ПЕРЕПИСАТЬ для хранения параметров привязанных к chat_id и названию кнопки
 
     def __init__(self, name, buttons=None, parent=None, action=None):
         self.parent = parent
@@ -14,10 +15,10 @@ class Menu:
         self.action = action
 
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=5)
-        markup.add(*buttons)
+        markup.add(*buttons)  # Обратите внимание - звёздочка используется для распаковки списка
         self.markup = markup
 
-        self.__class__.hash[name] = self
+        self.__class__.hash[name] = self  # в классе содержится словарь, со всеми экземплярами класса, обновим его
 
     @classmethod
     def getExtPar(cls, id):
@@ -38,7 +39,8 @@ class Menu:
         return menu
 
 
-m_main = Menu("Главное меню", buttons=["Прогулки", "Кафе/рестораны", "Помощь"])
+m_main = Menu("Главное меню", buttons=["Прогулки", "Кафе/рестораны"])
 
-m_pr = Menu("Прогулки", buttons=["Василеостровский район", "Адмиралтейский район", "Московский район", "Невский район", "Петроградский район", "Выход"], parent=m_main)
-m_kr = Menu("Кафе/рестораны", buttons=["Василеостровский район", "Адмиралтейский район", "Московский район", "Невский район", "Петроградский район", "Выход"], parent=m_main)
+#m_places = Menu("Прогулки", buttons=["Василеостровский район", "Адмиралтейский район", "Московский район", "Невский район", "Петроградский район", "Выход"], parent=m_main)
+
+#m_kr = Menu("Кафе/рестораны", buttons=["Василеостровский район", "Адмиралтейский район", "Московский район", "Невский район", "Петроградский район", "Выход"], parent=m_main)
