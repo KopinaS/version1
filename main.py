@@ -2,8 +2,9 @@ import telebot
 from menu import Menu
 from telebot import types
 import random
+import SECRET
 
-bot = telebot.TeleBot('5278792568:AAFt3lJxrghz3F7WiMCKXxsQsfOQ3FC0Lqo')
+bot = telebot.TeleBot(SECRET.TELEGRAM_TOKEN)
 
 @bot.message_handler(commands="start")
 def command(message, res=False):
@@ -22,11 +23,11 @@ def get_text_message(message):
     if Menu.cur_menu != None and ms_text in Menu.cur_menu.buttons:
         if ms_text == "Помощь":
             send_help(chat_id)
-        elif ms_text in ["Прогулки", "Кафе/рестораны"]:
+        elif ms_text in ["Прогулки", "Кафе/рестораны", "Игра"]:
             goto_menu(chat_id, ms_text)
         elif ms_text == "Выход":
             goto_menu(chat_id, ms_text)
-            
+
     if ms_text == "Василеостровский район":
         vplace1 = "Сад Академии художеств"
         vplace2 = "Египетские сфинксы на берегу Невы"
