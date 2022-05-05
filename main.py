@@ -23,8 +23,10 @@ def get_text_message(message):
     if Menu.cur_menu != None and ms_text in Menu.cur_menu.buttons:
         if ms_text == "Помощь":
             send_help(chat_id)
-        elif ms_text in ["Прогулки", "Кафе/рестораны", "Игра"]:
+        elif ms_text in ["Прогулки", "Кафе/рестораны"]:
             goto_menu(chat_id, ms_text)
+        elif ms_text == "Игра":
+            send_picture(chat_id)
         elif ms_text == "Выход":
             goto_menu(chat_id, ms_text)
 
@@ -299,6 +301,9 @@ def get_text_message(message):
                                            "🍔*Ketch Up Burgers*(Американская кухня) - Ул. Льва Толстого, 1/3\n\n"
                                            "🧇*Маннекен Пис*(Бельгийская кухня, Европейская кухня) - Каменноостровский проспект, 12",
                                  parse_mode="Markdown")
+
+def send_picture(chat_id):
+    bot.send_photo(chat_id)
 
 def goto_menu(chat_id, name_menu):
     global target_menu
