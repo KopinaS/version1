@@ -1,9 +1,9 @@
 from telebot import types
 # -----------------------------------------------------------------------
 class Menu:
-    hash = {} 
-    cur_menu = None 
-    extendedParameters = {} 
+    hash = {}
+    cur_menu = None
+    extendedParameters = {}
 
     def __init__(self, name, buttons=None, parent=None, action=None):
         self.parent = parent
@@ -12,10 +12,10 @@ class Menu:
         self.action = action
 
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=5)
-        markup.add(*buttons) 
+        markup.add(*buttons)
         self.markup = markup
 
-        self.__class__.hash[name] = self 
+        self.__class__.hash[name] = self
 
     @classmethod
     def getExtPar(cls, id):
@@ -35,6 +35,6 @@ class Menu:
             cls.cur_menu = menu
         return menu
 
-m_main = Menu("Главное меню", buttons=["Прогулки", "Кафе/рестораны"])
+m_main = Menu("Главное меню", buttons=["Прогулки", "Кафе/рестораны", "Игра"])
 m_places = Menu("Прогулки", buttons=["Василеостровский район", "Адмиралтейский район", "Московский район", "Невский район", "Петроградский район", "Выход"], parent=m_main)
-m_kr = Menu("Кафе/рестораны", buttons=["Василеостровский район", "Адмиралтейский район", "Московский район", "Невский район", "Петроградский район", "Выход"], parent=m_main)
+m_kr = Menu("Кафе/рестораны", buttons=["Василеостровский р-н", "Адмиралтейский р-н", "Московский р-н", "Невский р-н", "Петроградский р-н", "Выход"], parent=m_main)
