@@ -2,23 +2,23 @@ from telebot import types
 import random
 
 if ms_text == "Картина":
-place = random.choise()
-bot.send_message(chat_id, text="Что это за место?" + place)
-if place = '':
-    if ms_text == "Сад Академии художеств" or ms_text == "Сад художеств" or ms_text == "сад академии художеств" or ms_text == "сад художеств":
-        bot.send_message(chat_id, text="Правильно!")
-    else:
-        bot.send_message(chat_id, text="Не угадали( \n Это Сад Академии художеств")
-if place = '':
-    if ms_text == "Египетские сфинксы" or ms_text == "египетские сфинкусы" or ms_text == "сфинксы":
-        bot.send_message(chat_id, text="Правильно!")
-    else:
-        bot.send_message(chat_id, text="Не угадали( \n Это Египетские сфинксы")
-if place = '':
-    if ms_text == "Особняк Брусницыных" or ms_text == "особняк брусницыных" or ms_text == "особняк Брусницыных":
-        bot.send_message(chat_id, text="Правильно!")
-    else:
-            bot.send_message(chat_id, text="Не угадали( \n Это Особняк Брусницыных")
+    place = random.choise()
+    bot.send_message(chat_id, text="Что это за место?" + place)
+    if place = '':
+        if ms_text == "Сад Академии художеств" or ms_text == "Сад художеств" or ms_text == "сад академии художеств" or ms_text == "сад художеств":
+            bot.send_message(chat_id, text="Правильно!")
+        else:
+            bot.send_message(chat_id, text="Не угадали( \n Это Сад Академии художеств")
+    if place = '':
+        if ms_text == "Египетские сфинксы" or ms_text == "египетские сфинкусы" or ms_text == "сфинксы":
+            bot.send_message(chat_id, text="Правильно!")
+        else:
+            bot.send_message(chat_id, text="Не угадали( \n Это Египетские сфинксы")
+    if place = '':
+        if ms_text == "Особняк Брусницыных" or ms_text == "особняк брусницыных" or ms_text == "особняк Брусницыных":
+            bot.send_message(chat_id, text="Правильно!")
+        else:
+                bot.send_message(chat_id, text="Не угадали( \n Это Особняк Брусницыных")
     if place = '':
         if ms_text == "Музей Эрарта" or ms_text == "музей эрарта" or ms_text == "музей Эрарта" or ms_text == "эрарта" or ms_text == "Эрарта":
             bot.send_message(chat_id, text="Правильно!")
