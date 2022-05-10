@@ -65,37 +65,73 @@ if ms_text == "Картина":
         else:
             bot.send_message(chat_id, text="Не угадали( \n Это Исаакиевский собор")        
     if place = '':
-       if ms_text == "Дворцовая площадь" or ms_text == "дворцовая площадь" or ms_text == "Дворцовая" or ms_text == "дворцовая":
+        if ms_text == "Дворцовая площадь" or ms_text == "дворцовая площадь" or ms_text == "Дворцовая" or ms_text == "дворцовая":
            bot.send_message(chat_id, text="Правильно!")
-       else:
+        else:
            bot.send_message(chat_id, text="Не угадали( \n Дворцовая площадь")        
     if place = '':
-       if ms_text == "Сенатская площадь" or ms_text == "сенатская площадь":
+        if ms_text == "Сенатская площадь" or ms_text == "сенатская площадь":
            bot.send_message(chat_id, text="Правильно!")
-       else:
+        else:
            bot.send_message(chat_id, text="Не угадали( \n Это Сенатская площадь")        
     if place = '':
        if ms_text == "Остров Новая Голландия" or ms_text == "Новая Голландия" or ms_text == "новая голландия" or ms_text == "Новая голландия" or ms_text == "остров новая голландия":
            bot.send_message(chat_id, text="Правильно!")
-       else:
+        else:
            bot.send_message(chat_id, text="Не угадали( \n Это Остров Новая Голландия")        
     if place = '':
-        if ms_text == "Особняк Румянцева" or ms_text == "особняк Румянцева" or ms_text == "особняк Румянцева" or ms_text == "Особняк румянцева":
+         if ms_text == "Особняк Румянцева" or ms_text == "особняк Румянцева" or ms_text == "особняк Румянцева" or ms_text == "Особняк румянцева":
             bot.send_message(chat_id, text="Правильно!")
-        else:
+         else:
             bot.send_message(chat_id, text="Не угадали( \n Это Особняк Румянцева")        
     if place = '':
-        if ms_text == "Мраморный дворец" or ms_text == "мраморный дворец":
+         if ms_text == "Мраморный дворец" or ms_text == "мраморный дворец":
             bot.send_message(chat_id, text="Правильно!")
-        else:
+         else:
             bot.send_message(chat_id, text="Не угадали( \n Это Мраморный дворец")  
     if place = '':
-       if ms_text == "Владимирский дворец" or ms_text == "владимирский дворец":
+        if ms_text == "Владимирский дворец" or ms_text == "владимирский дворец":
            bot.send_message(chat_id, text="Правильно!")
-       else:
+        else:
            bot.send_message(chat_id, text="Не угадали( \n Это Владимирский дворец")        
     if place = '':
-       if ms_text == "Адмиралтейство" or ms_text == "адмиралтейство":
+        if ms_text == "Адмиралтейство" or ms_text == "адмиралтейство":
+           bot.send_message(chat_id, text="Правильно!")
+        else:
+           bot.send_message(chat_id, text="Не угадали( \n Это Адмиралтейство")
+    if place = '':
+        if ms_text == "Московские Триумфальные ворота" or ms_text == "Московские триумфальные ворота" or ms_text == "московские триумфальные ворота" or ms_text == "Триумфальные ворота" or ms_text == "триумфальные ворота":
+            bot.send_message(chat_id, text="Правильно!")
+        else:
+            bot.send_message(chat_id, text="Не угадали( \n Это Московские Триумфальные ворота")
+    if place = '':
+        if ms_text == "Пулковская обсерватория" or ms_text == "пулковская обсерватория":
+            bot.send_message(chat_id, text="Правильно!")
+        else:
+            bot.send_message(chat_id, text="Не угадали( \n Это Пулковская обсерватория")
+    if place = '':
+        if ms_text == "Музей Гранд Макет Россия" or ms_text == "музей Гранд Макет Россия" or ms_text == "Гранд Макет Россия" or ms_text == "Гранд макет россия" or ms_text == "гранд макет россия":
+            bot.send_message(chat_id, text="Правильно!")
+        else:
+                bot.send_message(chat_id, text="Не угадали( \n Это Музей Гранд Макет Россия")
+    if place = '':
+        if ms_text == "Площадь Победы" or ms_text == "Площадь победы" or ms_text == "площадь победы" or ms_text == "площадь Победы":
+            bot.send_message(chat_id, text="Правильно!")
+        else:
+            bot.send_message(chat_id, text="Не угадали( \n Это Площадь Победы")
+    if place = '':
+       if ms_text == "Московский парк Победы" or ms_text == "московский парк победы" or ms_text == "Московский парк победы" or ms_text == "московский парк Победы" or ms_text == "Парк Победы" or ms_text == "Парк победы" or ms_text == "парк победы" or ms_text == "парк Победы":
            bot.send_message(chat_id, text="Правильно!")
        else:
-           bot.send_message(chat_id, text="Не угадали( \n Это Адмиралтейство")               
+           bot.send_message(chat_id, text="Не угадали( \n Это Московский парк Победы")    
+    if place = '':
+        if ms_text == "Воскресенский Новодевичий Монастырь" or ms_text == "Воскресенский новодевичий монастырь" or ms_text == "воскресенский новодевичий монастырь" or ms_text == "Новодевичий монастырь" or ms_text == "новодевичий монастырь":
+            bot.send_message(chat_id, text="Правильно!")
+        else:
+            bot.send_message(chat_id, text="Не угадали( \n Это Воскресенский Новодевичий монастырь")
+    if place = '':
+        if ms_text == "Пулковский парк" or ms_text == "пулковский парк":
+            bot.send_message(chat_id, text="Правильно!")
+        else:
+            bot.send_message(chat_id, text="Не угадали( \n Это Пулковский парк")
+
